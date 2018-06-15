@@ -26,35 +26,14 @@ namespace FinalProject
         {
             InitializeComponent();
         }
-    
-    
-    public int amountLeft = (int)(change * 100);
-    
-    public int numOfTwenties = Calculation(ref amountLeft, 20);
-    int numOfTens = Calculation(ref amountLeft, 10);
-    int numOfFives = Calculation(ref amountLeft, 5);
-    int numOfOnes = Calculation(ref amountLeft, 1);
-    int numOfQuarters = Calculation(ref amountLeft, .25);
-    int numOfDimes = Calculation(ref amountLeft, .1);
-    int numOfNickels = Calculation(ref amountLeft, .05);
-    int numOfPennies = Calculation(ref amountLeft, .01);
 
-        
-
-/*Method for calculating amount of each currency using
-division and modulo*/
-public static int Calculation(ref int amountLeft, double y)
-{
-    int typeOfChange = (int)(y * 100);
-    int changeReturn = amountLeft / typeOfChange;
-    amountLeft = amountLeft % typeOfChange;
-    return changeReturn;
-}
-    
+        public static int Calculation(ref int amountLeft, double y)
         {
-            InitializeComponent();
+            int typeOfChange = (int)(y * 100);
+            int changeReturn = amountLeft / typeOfChange;
+            amountLeft = amountLeft % typeOfChange;
+            return changeReturn;
         }
-    
 
         private void button1_Click(object sender, EventArgs e)
         {
@@ -70,7 +49,7 @@ public static int Calculation(ref int amountLeft, double y)
 
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
-            
+
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -86,5 +65,4 @@ public static int Calculation(ref int amountLeft, double y)
             amountLeft = amountLeft % typeOfChange;
             return changeReturn;
         }
-
-        }
+    }
