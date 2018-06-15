@@ -27,14 +27,6 @@ namespace FinalProject
             InitializeComponent();
         }
 
-        public static int Calculation(ref int amountLeft, double y)
-        {
-            int typeOfChange = (int)(y * 100);
-            int changeReturn = amountLeft / typeOfChange;
-            amountLeft = amountLeft % typeOfChange;
-            return changeReturn;
-        }
-
         private void button1_Click(object sender, EventArgs e)
         {
             Form1 firstForm = new Form1();
@@ -58,7 +50,7 @@ namespace FinalProject
             string moneyInput = Convert.ToString(money);
             label3.Text = moneyInput;
         }
-        private int Calculation(ref int amountLeft, double y)
+        public static int Calculation(ref int amountLeft, double y)
         {
             int typeOfChange = (int)(y * 100);
             int changeReturn = amountLeft / typeOfChange;
@@ -66,3 +58,4 @@ namespace FinalProject
             return changeReturn;
         }
     }
+}
