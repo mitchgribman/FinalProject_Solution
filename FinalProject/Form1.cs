@@ -45,9 +45,8 @@ namespace FinalProject
                 (thirdForm_FormClosed);
             this.Hide();
             thirdForm.Show();
-            bool x = true; 
-            OpenCloseCD(x);
         }
+
         void thirdForm_FormClosed(object sender, FormClosedEventArgs e)
         {
             this.Show();
@@ -65,27 +64,18 @@ namespace FinalProject
             Application.Exit();
         }
 
-        [DllImport("winmm.dll", EntryPoint = "mciSendStringA", 
-            CharSet = CharSet.Ansi)]protected static extern int 
-            mciSendString(string lpstrCommand, 
-            StringBuilder lpstrReturnString, int uReturnLength, 
-            IntPtr hwndCallback);
-
-        public void OpenCloseCD(bool Open)
-        {
-            if (Open)
-            {
-                mciSendString("set cdaudio door open", null, 0, IntPtr.Zero);
-            }
-            else
-            {
-                mciSendString("set cdaudio door closed", null, 0, IntPtr.Zero);
-            }
-        }
-
         private void button3_Click(object sender, EventArgs e)
         {
+            Form4 fourthForm = new Form4();
+            fourthForm.FormClosed += new FormClosedEventHandler
+                (fourthForm_FormClosed);
+            this.Hide();
+            fourthForm.Show();
+        }
 
+        void fourthForm_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            this.Show();
         }
 
         private void Form1_Enter(object sender, EventArgs e)

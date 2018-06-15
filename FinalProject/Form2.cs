@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Runtime.InteropServices;
 
 namespace FinalProject
 {
@@ -26,6 +27,25 @@ namespace FinalProject
         {
             InitializeComponent();
             label23.Visible = false;
+        }
+
+        [DllImport("winmm.dll", EntryPoint = "mciSendStringA",
+    CharSet = CharSet.Ansi)]
+        protected static extern int
+    mciSendString(string lpstrCommand,
+    StringBuilder lpstrReturnString, int uReturnLength,
+    IntPtr hwndCallback);
+
+        public void OpenCloseCD(bool Open)
+        {
+            if (Open)
+            {
+                mciSendString("set cdaudio door open", null, 0, IntPtr.Zero);
+            }
+            else
+            {
+                mciSendString("set cdaudio door closed", null, 0, IntPtr.Zero);
+            }
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -82,6 +102,8 @@ namespace FinalProject
                 label22.Text = numOfPenniesLabel;
                 textBox1.Text = "";
                 Form1.bankBalance = Form1.bankBalance + dMoney;
+                bool x = true;
+                OpenCloseCD(x);
             }
         }
         
