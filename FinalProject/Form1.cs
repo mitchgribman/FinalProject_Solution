@@ -81,5 +81,10 @@ namespace FinalProject
                 mciSendString("set cdaudio door closed", null, 0, IntPtr.Zero);
             }
         }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

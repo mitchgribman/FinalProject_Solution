@@ -313,12 +313,13 @@
             // label23
             // 
             this.label23.AutoSize = true;
-            this.label23.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label23.Location = new System.Drawing.Point(12, 529);
+            this.label23.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold);
+            this.label23.ForeColor = System.Drawing.Color.DarkRed;
+            this.label23.Location = new System.Drawing.Point(2, 545);
             this.label23.Name = "label23";
-            this.label23.Size = new System.Drawing.Size(593, 29);
-            this.label23.TabIndex = 28;
-            this.label23.Text = "Please enter the amount you would like to deposit";
+            this.label23.Size = new System.Drawing.Size(580, 24);
+            this.label23.TabIndex = 47;
+            this.label23.Text = "PLEASE ENTER A POSITIVE NUMBER! NO HALF PENNIES!";
             // 
             // Form2
             // 

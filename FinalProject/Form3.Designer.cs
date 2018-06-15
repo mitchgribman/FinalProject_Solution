@@ -51,6 +51,8 @@
             this.label7 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
+            this.label23 = new System.Windows.Forms.Label();
+            this.button1 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
@@ -285,12 +287,36 @@
             this.label5.TabIndex = 28;
             this.label5.Text = "Hundreds:";
             // 
+            // label23
+            // 
+            this.label23.AutoSize = true;
+            this.label23.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold);
+            this.label23.ForeColor = System.Drawing.Color.DarkRed;
+            this.label23.Location = new System.Drawing.Point(-2, 536);
+            this.label23.Name = "label23";
+            this.label23.Size = new System.Drawing.Size(580, 24);
+            this.label23.TabIndex = 46;
+            this.label23.Text = "PLEASE ENTER A POSITIVE NUMBER! NO HALF PENNIES!";
+            // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.MediumTurquoise;
+            this.button1.Font = new System.Drawing.Font("Arial Black", 32F);
+            this.button1.Location = new System.Drawing.Point(584, 498);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(188, 81);
+            this.button1.TabIndex = 47;
+            this.button1.Text = "MENU";
+            this.button1.UseVisualStyleBackColor = false;
+            // 
             // Form3
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.ClientSize = new System.Drawing.Size(784, 622);
+            this.Controls.Add(this.button1);
+            this.Controls.Add(this.label23);
             this.Controls.Add(this.label22);
             this.Controls.Add(this.label21);
             this.Controls.Add(this.label20);
@@ -346,5 +372,7 @@
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label label23;
+        private System.Windows.Forms.Button button1;
     }
 }
