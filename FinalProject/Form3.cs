@@ -11,8 +11,10 @@ using System.Runtime.InteropServices;
 
 namespace FinalProject
 {
+    //similar to Form2
     public partial class Form3 : Form
     {
+        //variables
         public double wMoney;
         public int wNumOfHundreds;
         public int wNumOfTwenties;
@@ -62,16 +64,19 @@ namespace FinalProject
             int amountLeft = (int)(wMoney * 100);
             if (wMoney < 0)
             {
+                //hides error messages
                 label4.Visible = false;
                 label23.Visible = true;
                 textBox1.Text = "";
             }
             else
             {
+                //checks for insufficient funds
                 if (Form1.bankBalance < wMoney)
                 {
                     label4.Visible = true;
                     textBox1.Text = "";
+                    //prompts user to enter valid input to continue
                 }
                 else
                 {
@@ -104,6 +109,7 @@ namespace FinalProject
                 string numOfPenniesLabel = Convert.ToString(wNumOfPennies);
                 label22.Text = numOfPenniesLabel;
                 textBox1.Text = "";
+                //subtracts withdrawal from global bankBalance
                 Form1.bankBalance = Form1.bankBalance - wMoney;
                 bool x = true;
                 OpenCloseCD(x);
@@ -119,6 +125,7 @@ namespace FinalProject
             return changeReturn;
         }
 
+        //menu button to exit to main menu when clicked
         private void button1_Click_1(object sender, EventArgs e)
         {
             Form1 firstForm = new Form1();

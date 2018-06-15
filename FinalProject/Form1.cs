@@ -13,19 +13,18 @@ namespace FinalProject
 {
     public partial class Form1 : Form
     {
+        //I created my very own public variable of bank balance used
+        //across all my forms
         public static double bankBalance { get; set; }
-
+        
         public Form1()
         {
         InitializeComponent();
         }
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
+        //I simple menu where the buttons open and hide the following forms
         private void button1_Click(object sender, EventArgs e)
         {
+            //I found this on the Internet to open, close and hide my forms
             Form2 secondForm = new Form2();
             secondForm.FormClosed += new FormClosedEventHandler
                 (secondForm_FormClosed);
