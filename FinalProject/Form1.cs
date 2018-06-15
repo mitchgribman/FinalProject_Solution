@@ -39,8 +39,17 @@ namespace FinalProject
 
         private void button2_Click(object sender, EventArgs e)
         {
+            Form3 thirdForm = new Form3();
+            thirdForm.FormClosed += new FormClosedEventHandler
+                (thirdForm_FormClosed);
+            this.Hide();
+            thirdForm.Show();
             bool x = true; 
             OpenCloseCD(x);
+        }
+        void thirdForm_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            this.Show();
         }
 
         public static string AskUserForString(string x)

@@ -12,16 +12,16 @@ namespace FinalProject
 {
     public partial class Form2 : Form
     {
-        public double money;
-        public int numOfHundreds;
-        public int numOfTwenties;
-        public int numOfTens;
-        public int numOfFives;
-        public int numOfOnes;
-        public int numOfQuarters;
-        public int numOfDimes;
-        public int numOfNickels;
-        public int numOfPennies;
+        public double dMoney;
+        public int dNumOfHundreds;
+        public int dNumOfTwenties;
+        public int dNumOfTens;
+        public int dNumOfFives;
+        public int dNumOfOnes;
+        public int dNumOfQuarters;
+        public int dNumOfDimes;
+        public int dNumOfNickels;
+        public int dNumOfPennies;
         public Form2()
         {
             InitializeComponent();
@@ -46,35 +46,35 @@ namespace FinalProject
 
         private void button2_Click(object sender, EventArgs e)
         {
-            money = Convert.ToDouble(textBox1.Text);
-            string moneyInput = Convert.ToString(money);
-            int amountLeft = (int)(money * 100);
-            numOfHundreds = Calculation(ref amountLeft, 100);
-            numOfTwenties = Calculation(ref amountLeft, 20);
-            numOfTens = Calculation(ref amountLeft, 10);
-            numOfFives = Calculation(ref amountLeft, 5);
-            numOfOnes = Calculation(ref amountLeft, 1);
-            numOfQuarters = Calculation(ref amountLeft, .25);
-            numOfDimes = Calculation(ref amountLeft, .1);
-            numOfNickels = Calculation(ref amountLeft, .05);
-            numOfPennies = Calculation(ref amountLeft, .01);
-            string numOfHundredsLabel = Convert.ToString(numOfHundreds);
+            dMoney = Convert.ToDouble(textBox1.Text);
+            string dMoneyInput = Convert.ToString(dMoney);
+            int amountLeft = (int)(dMoney * 100);
+            dNumOfHundreds = Calculation(ref amountLeft, 100);
+            dNumOfTwenties = Calculation(ref amountLeft, 20);
+            dNumOfTens = Calculation(ref amountLeft, 10);
+            dNumOfFives = Calculation(ref amountLeft, 5);
+            dNumOfOnes = Calculation(ref amountLeft, 1);
+            dNumOfQuarters = Calculation(ref amountLeft, .25);
+            dNumOfDimes = Calculation(ref amountLeft, .1);
+            dNumOfNickels = Calculation(ref amountLeft, .05);
+            dNumOfPennies = Calculation(ref amountLeft, .01);
+            string numOfHundredsLabel = Convert.ToString(dNumOfHundreds);
             label14.Text = numOfHundredsLabel;
-            string numOfTwentiesLabel = Convert.ToString(numOfTwenties);
+            string numOfTwentiesLabel = Convert.ToString(dNumOfTwenties);
             label15.Text = numOfTwentiesLabel;
-            string numOfTensLabel = Convert.ToString(numOfTens);
+            string numOfTensLabel = Convert.ToString(dNumOfTens);
             label16.Text = numOfTensLabel;
-            string numOfFivesLabel = Convert.ToString(numOfFives);
+            string numOfFivesLabel = Convert.ToString(dNumOfFives);
             label17.Text = numOfFivesLabel;
-            string numOfOnesLabel = Convert.ToString(numOfOnes);
+            string numOfOnesLabel = Convert.ToString(dNumOfOnes);
             label18.Text = numOfOnesLabel;
-            string numOfQuartersLabel = Convert.ToString(numOfQuarters);
+            string numOfQuartersLabel = Convert.ToString(dNumOfQuarters);
             label19.Text = numOfQuartersLabel;
-            string numOfDimesLabel = Convert.ToString(numOfDimes);
+            string numOfDimesLabel = Convert.ToString(dNumOfDimes);
             label20.Text = numOfDimesLabel;
-            string numOfNickelsLabel = Convert.ToString(numOfNickels);
+            string numOfNickelsLabel = Convert.ToString(dNumOfNickels);
             label21.Text = numOfNickelsLabel;
-            string numOfPenniesLabel = Convert.ToString(numOfPennies);
+            string numOfPenniesLabel = Convert.ToString(dNumOfPennies);
             label22.Text = numOfPenniesLabel;
         }
         
