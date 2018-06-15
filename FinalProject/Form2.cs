@@ -22,11 +22,11 @@ namespace FinalProject
         public int numOfDimes;
         public int numOfNickels;
         public int numOfPennies;
-        public Form1()
+        public Form2()
         {
             InitializeComponent();
         }
-    }
+    
     
     public int amountLeft = (int)(change * 100);
     
@@ -87,6 +87,6 @@ public static int Calculation(ref int amountLeft, double y)
             return changeReturn;
         }
 
-
+        }
     }
 }
