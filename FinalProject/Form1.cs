@@ -14,10 +14,10 @@ namespace FinalProject
     public partial class Form1 : Form
     {
         public static double bankBalance { get; set; }
+
         public Form1()
         {
-            bankBalance = 0;
-            InitializeComponent();
+        InitializeComponent();
         }
 
         private void label1_Click(object sender, EventArgs e)
@@ -86,6 +86,11 @@ namespace FinalProject
         private void button3_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void Form1_Enter(object sender, EventArgs e)
+        {
+            bankBalance = 0;
         }
     }
 }
