@@ -25,6 +25,16 @@ namespace FinalProject
         public Form2()
         {
             InitializeComponent();
+            int amountLeft = (int)(money * 100);
+            numOfHundreds = Calculation(ref amountLeft, 100);
+            numOfTwenties = Calculation(ref amountLeft, 20);
+            numOfTens = Calculation(ref amountLeft, 10);
+            numOfFives = Calculation(ref amountLeft, 5);
+            numOfOnes = Calculation(ref amountLeft, 1);
+            numOfQuarters = Calculation(ref amountLeft, .25);
+            numOfDimes = Calculation(ref amountLeft, .1);
+            numOfNickels = Calculation(ref amountLeft, .05);
+            numOfPennies = Calculation(ref amountLeft, .01);
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -50,17 +60,7 @@ namespace FinalProject
             string moneyInput = Convert.ToString(money);
             label3.Text = moneyInput;
         }
-
-        amountLeft = (int)(money * 100);
-        numOfHundreds = Calculation(ref amountLeft, 20);
-        numOfTwenties = Calculation(ref amountLeft, 20);
-        numOfTens = Calculation(ref amountLeft, 10);
-        numOfFives = Calculation(ref amountLeft, 5);
-        numOfOnes = Calculation(ref amountLeft, 1);
-        numOfQuarters = Calculation(ref amountLeft, .25);
-        numOfDimes = Calculation(ref amountLeft, .1);
-        numOfNickels = Calculation(ref amountLeft, .05);
-        numOfPennies = Calculation(ref amountLeft, .01);
+        
         public static int Calculation(ref int amountLeft, double y)
         {
             int typeOfChange = (int)(y * 100);
