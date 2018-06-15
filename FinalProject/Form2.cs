@@ -13,6 +13,19 @@ namespace FinalProject
     public partial class Form2 : Form
     {
         public double money;
+        public int numOfHundreds;
+        public int numOfTwenties;
+        public int numOfTens;
+        public int numOfFives;
+        public int numOfOnes;
+        public int numOfQuarters;
+        public int numOfDimes;
+        public int numOfNickels;
+        public int numOfPennies;
+        public Form1()
+        {
+            InitializeComponent();
+        }
     }
     
     public int amountLeft = (int)(change * 100);
@@ -66,6 +79,14 @@ public static int Calculation(ref int amountLeft, double y)
             string moneyInput = Convert.ToString(money);
             label3.Text = moneyInput;
         }
+        private int Calculation(ref int amountLeft, double y)
+        {
+            int typeOfChange = (int)(y * 100);
+            int changeReturn = amountLeft / typeOfChange;
+            amountLeft = amountLeft % typeOfChange;
+            return changeReturn;
+        }
+
 
     }
 }
