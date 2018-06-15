@@ -48,7 +48,6 @@ namespace FinalProject
         {
             money = Convert.ToDouble(textBox1.Text);
             string moneyInput = Convert.ToString(money);
-            label3.Text = moneyInput;
             int amountLeft = (int)(money * 100);
             numOfHundreds = Calculation(ref amountLeft, 100);
             numOfTwenties = Calculation(ref amountLeft, 20);
@@ -60,7 +59,23 @@ namespace FinalProject
             numOfNickels = Calculation(ref amountLeft, .05);
             numOfPennies = Calculation(ref amountLeft, .01);
             string numOfHundredsLabel = Convert.ToString(numOfHundreds);
-            label5.Text = numOfHundredsLabel;
+            label14.Text = numOfHundredsLabel;
+            string numOfTwentiesLabel = Convert.ToString(numOfTwenties);
+            label15.Text = numOfTwentiesLabel;
+            string numOfTensLabel = Convert.ToString(numOfTens);
+            label16.Text = numOfTensLabel;
+            string numOfFivesLabel = Convert.ToString(numOfFives);
+            label17.Text = numOfFivesLabel;
+            string numOfOnesLabel = Convert.ToString(numOfOnes);
+            label18.Text = numOfOnesLabel;
+            string numOfQuartersLabel = Convert.ToString(numOfQuarters);
+            label19.Text = numOfQuartersLabel;
+            string numOfDimesLabel = Convert.ToString(numOfDimes);
+            label20.Text = numOfDimesLabel;
+            string numOfNickelsLabel = Convert.ToString(numOfNickels);
+            label21.Text = numOfNickelsLabel;
+            string numOfPenniesLabel = Convert.ToString(numOfPennies);
+            label22.Text = numOfPenniesLabel;
         }
         
         public static int Calculation(ref int amountLeft, double y)
