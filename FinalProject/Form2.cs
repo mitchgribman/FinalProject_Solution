@@ -39,7 +39,7 @@ namespace FinalProject
     int numOfNickels = Calculation(ref amountLeft, .05);
     int numOfPennies = Calculation(ref amountLeft, .01);
 
-        }
+        
 
 /*Method for calculating amount of each currency using
 division and modulo*/
@@ -88,5 +88,3 @@ public static int Calculation(ref int amountLeft, double y)
         }
 
         }
-    }
-}
