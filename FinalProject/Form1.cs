@@ -13,9 +13,10 @@ namespace FinalProject
 {
     public partial class Form1 : Form
     {
-        public int bankBalance { get; set; }
+        public static double bankBalance { get; set; }
         public Form1()
         {
+            bankBalance = 0;
             InitializeComponent();
         }
 
