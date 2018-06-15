@@ -53,6 +53,7 @@
             this.label5 = new System.Windows.Forms.Label();
             this.label23 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
+            this.label4 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // label1
@@ -302,12 +303,24 @@
             // 
             this.button1.BackColor = System.Drawing.Color.MediumTurquoise;
             this.button1.Font = new System.Drawing.Font("Arial Black", 32F);
-            this.button1.Location = new System.Drawing.Point(584, 498);
+            this.button1.Location = new System.Drawing.Point(584, 514);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(188, 81);
             this.button1.TabIndex = 47;
             this.button1.Text = "MENU";
             this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click_1);
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold);
+            this.label4.ForeColor = System.Drawing.Color.DarkRed;
+            this.label4.Location = new System.Drawing.Point(150, 487);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(514, 24);
+            this.label4.TabIndex = 48;
+            this.label4.Text = "INSUFFICIENT FUNDS - Check balance and try again!";
             // 
             // Form3
             // 
@@ -315,6 +328,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.ClientSize = new System.Drawing.Size(784, 622);
+            this.Controls.Add(this.label4);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.label23);
             this.Controls.Add(this.label22);
@@ -374,5 +388,6 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label23;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Label label4;
     }
 }
